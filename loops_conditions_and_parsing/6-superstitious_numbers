@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Displays numbers from 1 to 20 with specific messages
+# Displays numbers from 1 to 20 with specific messages on new lines
 n=1
 while [ "$n" -le 20 ]
 do
     case "$n" in
-        4) echo "4 bad luck from China" ;;
-        9) echo "9 bad luck from Japan" ;;
-        17) echo "17 bad luck from Italy" ;;
+        4) echo "$n"; echo "bad luck from China" ;;
+        9) echo "$n"; echo "bad luck from Japan" ;;
+        17) echo "$n"; echo "bad luck from Italy" ;;
         *) echo "$n" ;;
     esac
     n=$((n + 1))
