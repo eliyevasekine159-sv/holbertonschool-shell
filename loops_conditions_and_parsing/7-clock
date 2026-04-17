@@ -6,6 +6,10 @@ do
     minute=0
     while [ $minute -le 59 ]
     do
+        if [ $hour -eq 12 ] && [ $minute -eq 0 ]; then
+            minute=$((minute + 1))
+            continue
+        fi
         echo "Hour: $hour"
         echo "Minute: $minute"
         minute=$((minute + 1))
