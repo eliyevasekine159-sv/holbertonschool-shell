@@ -1,21 +1,7 @@
 #!/usr/bin/env bash
-# Script that creates a PID file and handles multiple signals
-
-# Faylı dərhal yaradırıq
-echo $$ > /var/run/myscript.pid
-
-# Siqnalları idarə edirik
-trap "echo 'I hate the kill command'; rm -f /var/run/myscript.pid; exit" SIGTERM
-trap "echo 'Y U no love me?!'" SIGINT
-trap "rm -f /var/run/myscript.pid; exit" SIGQUIT
-
-# Sonsuz dövr
-while true
-do
-    echo "To
-cd ~/holbertonschool-shell/processes_and_signals
 # Script that creates a PID file and handles signals
 
+# Create PID file
 echo $$ > /var/run/myscript.pid
 
 trap "echo 'I hate the kill command'; rm -f /var/run/myscript.pid; exit" SIGTERM
