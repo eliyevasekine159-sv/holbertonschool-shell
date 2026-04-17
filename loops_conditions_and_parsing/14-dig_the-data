@@ -1,15 +1,4 @@
 #!/usr/bin/env bash
 # This script groups Apache log visitors by IP and HTTP status code
 
-awk '
-{
-    ip = $1
-    code = $9
-    key = ip " " code
-    count[key]++
-}
-END {
-    for (k in count)
-        print count[k], k
-}
-' | sort -nr
+awk '{print $1, $9}' | sort | uniq -c | sort -nr
