@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Writes I am alive to a file
 while true
 do
     echo "I am alive!" >> /tmp/my_process
