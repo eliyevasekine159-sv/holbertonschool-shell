@@ -1,21 +1,16 @@
 #!/usr/bin/env bash
 # This script displays numbers from 1 to 20 with specific case messages
 n=1
-while [ $n -le 20 ]
-do
-	case $n in
-		4)
-			echo "$n bad luck from China"
-			;;
-		9)
-			echo "$n bad luck from Japan"
-			;;
-		17)
-			echo "$n bad luck from Italy"
-			;;
-		*)
-			echo "$n"
-			;;
-	esac
-	n=$((n + 1))
+while [ $n -le 20 ]; do
+    case $n in
+        4)
+            echo "4 bad luck from China" ;;
+        9)
+            echo "9 bad luck from Japan" ;;
+        17)
+            echo "17 bad luck from Italy" ;;
+        *)
+            echo "$n" ;;
+    esac
+    n=$((n + 1))
 done
